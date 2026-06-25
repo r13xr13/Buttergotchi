@@ -18,19 +18,19 @@ Buttergotchi advertises its presence on WiFi channels, discovers other Buttergot
 
 ## Supported Boards
 
-Buttergotchi supports 30+ ESP32-based boards:
+Buttergotchi supports 50+ ESP32-based board configurations:
 
 ### M5Stack
 - Cardputer
 - StickS3
-- StickC Plus / Plus2
-- Core2 / CoreS3 / Core (16MB / 4MB)
+- StickC Plus (Plus1.1) / Plus2
+- Core2 / CoreS3 / Core (4MB) / Core (16MB)
 - DinMeter
 
 ### LilyGo
 - T-Deck / T-Deck Pro
 - T-Embed / T-Embed CC1101
-- T-Display-S3 (multiple variants)
+- T-Display-S3 / S3 Pro / S3 Touch / S3 MMC
 - T-Watch-S3
 - T-HMI
 - T-LoRa-Pager
@@ -43,18 +43,47 @@ Buttergotchi supports 30+ ESP32-based boards:
 - 2432W328R / S024R
 - 3248S035R / 3248S035C
 
-### Others
-- ESP32-S3-DevKitC-1
+### Marauder
+- Mini / v7 / V4-V6 / v61
+
+### Elecrow
+- 24B / 28B / 35B / 35Bv2_2
+
+### ESP32 DevKits
+- ESP32-S3-DevKitC-1 (PSRAM / no PSRAM)
+- ESP32-C5 / C5-TFT
+- ESP-General
+
+### Other
 - Arduino Nesso N1
 - Smoochiee Board
 - XK404
 - Reaper
 - Phantom S024R
-- Marauder Mini / v7 / V4-V6 / v61
-- Awok Mini
-- Elecrow 24B / 28B / 35B / 35Bv2_2
+- Awok Mini / Awok Touch
 - NM-CYD-C5
 - ES3C28P
+- WaveSentry-R1
+
+## Releases
+
+Pre-built binaries are available for the most common boards. Flash with esptool:
+
+```bash
+esptool.py --port /dev/ttyACM0 --baud 921600 write_flash 0x00000 releases/Buttergotchi-m5stack-cardputer.bin
+```
+
+### Available Binaries
+
+| Board | File |
+|---|---|
+| M5Stack Cardputer | `Buttergotchi-m5stack-cardputer.bin` |
+| M5Stack StickS3 | `Buttergotchi-m5stack-sticks3.bin` |
+| LilyGo T-Deck | `Buttergotchi-lilygo-t-deck.bin` |
+| LilyGo T-Embed CC1101 | `Buttergotchi-lilygo-t-embed-cc1101.bin` |
+| CYD-2432S028 | `Buttergotchi-CYD-2432S028.bin` |
+
+Don't see your board? Build from source — see below.
 
 ## Building
 
@@ -69,7 +98,7 @@ Buttergotchi supports 30+ ESP32-based boards:
 git clone https://github.com/r13xr13/Buttergotchi.git
 cd Buttergotchi
 
-# Build for your board (default is m5stack-cardputer)
+# Build for your board
 pio run -e m5stack-cardputer
 
 # Build and flash

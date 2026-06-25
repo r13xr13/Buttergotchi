@@ -29,7 +29,6 @@ BQ27220 bq;
 #endif
 
 #include "core/i2c_finder.h"
-#include "modules/rf/rf_utils.h"
 
 // Keyboard
 #include <Adafruit_TCA8418.h>

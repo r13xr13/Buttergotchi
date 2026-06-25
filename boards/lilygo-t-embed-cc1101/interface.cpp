@@ -29,7 +29,6 @@ BQ27220 bq;
 #endif
 
 #include "core/i2c_finder.h"
-#include "modules/rf/rf_utils.h"
 #include <Adafruit_PN532.h>
 
 /***************************************************************************************
@@ -222,20 +221,13 @@ void powerOff() {
 void powerDownNFC() {
     Adafruit_PN532 nfc = Adafruit_PN532(17, 45);
     bool i2c_check = check_i2c_address(PN532_I2C_ADDRESS);
-    nfc.setInterface(GROVE_SDA, GROVE_SCL);
-    nfc.begin();
-    uint32_t versiondata = nfc.getFirmwareVersion();
-    if (i2c_check || versiondata) {
-        nfc.powerDown();
-    } else {
-        Serial.println("Can't powerDown PN532");
+    if (i2c_check) {
+        nfc.begin();
     }
 }
 
 void powerDownCC1101() {
-    if (!initRfModule("rx", buttergotchiConfigPins.rfFreq)) { Serial.println("Can't init CC1101"); }
-
-    ELECHOUSE_cc1101.goSleep();
+    digitalWrite(CC1101_SS_PIN, LOW);
 }
 
 /*********************************************************************
