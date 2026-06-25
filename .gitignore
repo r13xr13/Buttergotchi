@@ -1,0 +1,19 @@
+# Ignore user's personal WiFi config
+include/MyWiFi.h
+
+# Build artifacts
+.pio/
+.omx/
+*.bin
+*.gz
+*.zip
+
+# Dev tooling
+tools/
+.vscode/
+.idea/
+
+# Backup / editor artifacts
+*.forkbak
+*.bak
+.omo/

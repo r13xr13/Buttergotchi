@@ -1,0 +1,20 @@
+{
+  "name": "ButtergotchiHAL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r13xr13/Buttergotchi.git"
+  },
+  "version": "7.3.1",
+  "authors": {
+    "name": "Buttergotchi",
+    "url": "https://github.com/r13xr13/Buttergotchi"
+  },
+  "export": {
+    "include": ["io_expander", "sd_card"]
+  },
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "libArchive": false
+  }
+}
