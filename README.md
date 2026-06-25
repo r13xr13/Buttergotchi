@@ -67,10 +67,15 @@ Buttergotchi supports 50+ ESP32-based board configurations:
 
 ## Releases
 
-Pre-built binaries are available for the most common boards. Flash with esptool:
+Pre-built binaries are available for the most common boards. Flash via [ESP Web Tools](https://esptool.spacehuhn.com/) or with esptool:
 
 ```bash
-esptool.py --port /dev/ttyACM0 --baud 921600 write_flash 0x00000 releases/Buttergotchi-m5stack-cardputer.bin
+# Find your board's serial port:
+#   Linux:   ls /dev/tty*
+#   macOS:   ls /dev/cu.*
+#   Windows: check Device Manager > Ports (COM & LPT)
+
+esptool.py --port <YOUR_PORT> --baud 921600 write_flash 0x00000 Buttergotchi-<board>.bin
 ```
 
 ### Available Binaries
