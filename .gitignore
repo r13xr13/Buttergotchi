@@ -5,6 +5,7 @@ include/MyWiFi.h
 .pio/
 .omx/
 *.bin
+!releases/*.bin
 *.gz
 *.zip
 
