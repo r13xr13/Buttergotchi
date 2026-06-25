@@ -183,3 +183,9 @@ Session logs (when SD is available):
 ## License
 
 GNU General Public License v3.0
+
+<div align="center">
+
+**README** by [HEAVYBUTTER](https://github.com/r13xr13)
+
+</div>
