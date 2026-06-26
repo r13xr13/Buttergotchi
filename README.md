@@ -1,6 +1,6 @@
 # Buttergotchi
 
-A pwnagotchi-inspired WiFi handshake capture tool for ESP32 devices. Supports a wide range of ESP32-based boards.
+A pwnagotchi inspired WiFi handshake capture tool for ESP32 devices. Supports a wide range of ESP32-based boards.
 
 Buttergotchi advertises its presence on WiFi channels, discovers other Buttergotchi and pwnagotchi devices, sends deauth frames to force client reconnections, and captures WPA handshake PCAP files for offline cracking.
 
