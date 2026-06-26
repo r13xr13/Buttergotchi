@@ -178,7 +178,7 @@ Session logs (when SD is available):
 
 - Pwnagotchi protocol compatibility from the original pwnagotchi project (evilsocket)
 - Pwngrid advertising and sniffer logic adapted from 7h30th3r0n3 and viniciusbo
-- Thanks to bmorcelli for ESP32 framework and library support
+- Thanks to bmorcelli for the framework
 
 ## License
 
